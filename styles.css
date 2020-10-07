@@ -1,0 +1,635 @@
+/************************generals*****************/
+:root {
+    --color-primary: #000000;
+    --color-second: #ffffff;
+    --font-family: 'Source Sans Pro', sans-serif;
+    --background-second: rgba(94 , 223, 0, 1);
+}
+html {
+    box-sizing: border-box;
+    font-family: var(--font-family);
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(./images/pattern.jpg);
+    overflow-x: hidden;
+}
+*,
+::before,
+::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+/***********************header*******************/
+#header {
+    position: sticky;
+    top: 0px;
+    z-index: 999;
+    width: 100%;
+    min-height: 150px;
+    background-color: var(--color-second);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#logo {
+    max-width: 30%;
+}
+#logo img {
+    max-width: 85%;
+    max-height: 120px;
+}
+#menu {
+    max-width: 65%;
+    font-size: 1.5rem;
+}
+#menu a {
+    text-decoration: none;
+    margin-right: 10px;
+    color: var(--color-primary);
+    border-right: thin solid black;
+    padding-right: 10px;
+}
+#menu a:last-child {
+    border: none;
+}
+#menu a:hover {
+    color: var(--background-second);
+}
+#menu a.active {
+    color: var(--background-second);
+}
+/***********************show*******************/
+#show {
+    position: relative;
+    width: 100%;
+    background-image: url(./images/show.jpg);
+    background-position: center;
+    min-height: 50vh;
+    margin-bottom: 10vh;
+    display: flex;
+    justify-content: center;
+}
+#fixed {
+    position: absolute;
+    display: flex;
+    top: 90%;
+    background-color: white;
+    max-width: 75%;
+    max-height: 100px;
+    border-radius: 20px;
+    padding: 20px;
+}
+#fixed > div {
+    padding-right: 1vw;
+    padding-left: 1vw;
+    display: flex;
+    flex-direction: column;
+}
+#fixed > div:nth-last-child(3) {
+    border-right: thin solid black;
+    padding-left: 0;
+}
+#fixed > div:nth-last-child(5) {
+    border-right: thin solid black;
+}
+#fixed > div:first-child {
+    padding-left: 0;
+    padding-right: 0;
+}
+#fixed > div:last-child {
+    padding-left: 0;
+    padding-right: 0;
+}
+#fixed > div > h3 {
+    color: #cccccc;
+}
+.delivery {
+    font-size: 2rem;
+    padding-top: 1vh;
+}
+.plant {
+    font-size: 2rem;
+    padding-top: 1vh;
+}
+.recycle {
+    font-size: 2rem;
+    padding-top: 1vh;
+}
+#fixedone {
+    position: absolute;
+    top: 90%;
+    display: none;
+    background-color: white;
+    max-width: 50%;
+    border-radius: 20px;
+    padding: 5px;
+}
+#fixedone > div {
+    display: flex;
+    flex-direction: row;
+    border-bottom:  thin solid black;
+    padding: 10px;
+}
+#fixedone div:last-child {
+    border-bottom: none;
+}
+#fixedone > div > div h3 {
+    color: #cccccc;
+}
+.deliveryone {
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    margin-right: 2vw;
+}
+.plantone {
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    margin-right: 2vw;
+}
+.recycleone {
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    margin-right: 2vw;
+}
+/***********************main*******************/
+main {
+    margin-left: 6vw;
+}
+.about {
+    width: 90%;
+    text-align: center;
+    padding-top: 22vh;
+    min-height: 50vh;
+}
+.about p {
+    color: var(--color-second);
+    font-size: 1.5rem;
+}
+.products {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 10vh;
+}
+.title {
+    width: 100%;
+    font-size: 2rem;
+    padding-top: 10vh;
+    margin-bottom: 10vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: var(--color-second);
+}
+.div,
+.divtwo {
+    width: 25%;
+    background-color: transparent;
+    border: thin solid var(--color-second);
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 5vw;
+    color: var(--color-second);
+}
+.div h3,
+.divtwo h3 {
+    font-size: 1.5rem;
+    margin-bottom: 2vh;
+}
+.div img,
+.divtwo img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+}
+.div:hover {
+    transform: scale(1.03, 1.03);
+    box-shadow: 0 0 20px #cccccc;
+    background-color:  rgba(0, 201, 153, 0.3);
+    color: var(--color-primary);
+    border: thin solid var(--color-primary);
+}
+.divtwo:hover {
+    transform: scale(1.03, 1.03);
+    box-shadow: 0 0 20px #cccccc;
+    background-color:  rgba(94 , 223, 0, 0.3);
+    color: var(--color-primary);
+    border: thin solid var(--color-primary);
+}
+.sale {
+    color: rgb(245, 22, 7);
+}
+.contact {
+    width: 90%;
+    margin-bottom: 10vh;
+    min-height: 50vh;
+    padding-top: 20vh;
+    display: flex;
+    justify-content: space-between;
+}
+.contact > div:last-child {
+    margin-top: 10vh;
+}
+.contact a {
+    text-decoration: none;
+    border: none;
+    color: var(--color-second);
+}
+.whatsapp,
+.instagram,
+.mail {
+    margin-top: 3vh;
+    margin-left: 5vw;
+    font-size: 1.5rem;
+    color: var(--color-second);
+}
+.whatsapp > span,
+.instagram > span,
+.mail > span {
+    font-family: var(--font-family) !important;
+}
+.contact h3 {
+    margin-top: 3vh;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    font-size: 1.5rem;
+    color: var(--color-second);
+}
+.contact h4 {
+    margin-top: 3vh;
+    font-size: 1.1rem;
+    color: var(--color-second);
+}
+.instagram span:hover {
+    color: var(--background-second);
+    border: none;
+}
+
+/***********************footer*******************/
+#footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 120px;
+    width: 100%;
+    background-color: var(--color-second);
+    margin-top: 5vh;
+}
+/* ************scroll-top-button **************** */
+
+.scroll-top-btn {
+    position: fixed;
+    z-index: 999;
+    bottom: 2vh;
+    right: calc(4.25rem + 1vw);
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    font-size: 2em;
+    font-weight: bold;
+    background-color: var(--background-second);
+    color: var(--color-primary);
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+
+.scroll-top-btn:hover {
+    background-color: var(--color-primary);
+    color: var(--color-second);
+}
+
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+}
+/* ************whatsapp **************** */
+
+.whatsappsend {
+    position: fixed;
+    z-index: 999;
+    bottom: 15vh;
+    right: calc(4.25rem + 1vw);
+    width: 3.5rem;
+    height: 3.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: var(--background-second);
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease-out;
+}
+.whatsappicon {
+    font-size: 4rem;
+    color: var(--color-second);
+}
+.whatsappsend:hover {
+    transform: scale(1.1, 1.1);
+    box-shadow: 0 0 10px #cccccc;
+}
+/***********************valores*******************/
+.valores {
+   display: block;
+}
+.valores > label {
+    margin-right: 1vw;
+}
+.valores > h3 {
+    display: block;
+    text-align: center;
+}
+.medio,
+.kilo {
+    margin-right: 0.5vw;
+    margin-top: 2vh;
+    cursor: pointer;
+}
+.precio {
+    padding-top: 2vh;
+}
+
+/********************************responsive**************************************/
+@media (max-width: 1430px){
+    #fixed div {
+        font-size: 0.8rem;
+    }
+   .delivery,
+   .recycle,
+   .plant {
+       font-size: 1.5rem;
+   }
+   .about {
+       padding-top: 15vh;
+   }
+   .whatsapp,
+   .instagram,
+   .mail {
+       margin-left: 3vw;
+   }
+   .contact h3 {
+       margin-top: 2vh;
+       margin-left: 3vw;
+       margin-right: 3vw;
+       font-size: 1rem;
+   }
+   .contact h4 {
+       margin-top: 1.5vh;
+       font-size: 0.8rem;
+   }
+}
+@media (max-width: 1140px){
+    body {
+        overflow-x: hidden;
+    }
+    #fixed div {
+        font-size: 0.7rem;
+    }
+   .delivery,
+   .recycle,
+   .plant {
+       font-size: 1.2rem;
+   }
+   .div img,
+   .divtwo img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+    }
+    .whatsapp,
+    .instagram,
+    .mail {
+        margin-left: 3vw;
+    }
+   .contact h3 {
+        margin-top: 2vh;
+        margin-left: 3vw;
+        margin-right: 3vw;
+        font-size: 1rem;
+    }
+    .contact h4 {
+        margin-top: 1.5vh;
+        font-size: 0.8rem;
+    }
+   .whatsapp,
+    .instagram,
+    .mail {
+        font-size: 1rem;
+    }
+    .scroll-top-btn,
+    .whatsappsend {
+        right: 1vw;
+    }
+    .scroll-top-btn {
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+    }
+}
+@media (max-width: 875px){
+    #fixed {
+        display: none;
+    }
+    #fixedone {
+        display: block;
+    }
+    .about {
+        padding-top: 30vh;
+    }
+    .title {
+        font-size: 1.6rem;
+    }
+    .div img,
+    .divtwo img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+    }
+    .contact {
+        display: flex;
+        flex-direction: column;
+    }
+    .contact div:first-child {
+        width: 100%;
+        text-align: center;
+    }
+    .contact div:last-child {
+        width: 100%;
+        text-align: center;
+    }
+    .whatsapp,
+    .instagram,
+    .mail {
+        margin-left: 3vw;
+    }
+    .contact h3 {
+        margin-top: 2vh;
+        margin-left: 3vw;
+        margin-right: 3vw;
+        font-size: 1rem;
+    }
+    .contact h4 {
+        margin-top: 1.5vh;
+        font-size: 0.8rem;
+    }
+    @media (max-width: 820px){
+        .about {
+            padding-top: 35vh;
+        }
+        .div,
+        .divtwo {
+            width: 40%;
+        }
+        #footer {
+            display: flex;
+            flex-direction: column;
+        }
+        #footer div:first-child {
+            width: 100%;
+            text-align: center;
+        }
+        #footer div:last-child {
+            width: 100%;
+            text-align: center;
+        }
+    }
+    @media (max-width: 675px){
+        #header {
+            display: flex;
+            flex-direction: column;
+        }
+        #logo {
+            width: 90%;
+        }
+        #logo img {
+            max-width: 85%;
+            max-height: 120px;
+        }
+        #menu {
+            width: 90%;
+            font-size: 1rem;
+            text-align: center;
+        }
+        #fixedone {
+             max-width: 90%;
+        }
+        #fixedone > div > div h2 {
+            font-size: 1.2rem;
+        }
+        #fixedone > div > div h3 {
+            font-size: 1rem;
+        }
+        .deliveryone,
+        .plantone,
+        .recycleone {
+            font-size: 1rem;
+        }
+        .about p {
+            font-size: 1.2rem;
+        }
+        .products {
+            width: 100%;
+        }
+        .div,
+        .divtwo {
+            width: 80%;
+        }
+        .div h3,
+        .divtwo h3 {
+            font-size: 1.2rem;
+        }
+        .div img,
+        .divtwo img {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+        }
+        .contact {
+            display: flex;
+            flex-direction: column;
+        }
+        .contact div:first-child {
+            width: 100%;
+            text-align: center;
+        }
+        .contact div:last-child {
+            width: 100%;
+            text-align: center;
+        }
+        .contact h3 {
+            margin-top: 1.5vh;
+            margin-left: 1.5vw;
+            margin-right: 1.5vw;
+            font-size: 1rem;
+        }
+        .contact h4 {
+            font-size: 0.8rem;
+        }
+        .whatsapp > span,
+        .instagram > span,
+        .mail > span {
+            font-size: 0.8rem;
+        }
+    }
+    @media (max-width: 495px){
+        #menu {
+            width: 100%;
+            font-size: 0.8rem;
+            text-align: center;
+        }
+        .div img,
+        .divtwo img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+        }
+        .title {
+            font-size: 1.4rem;
+        }
+    }
+    @media (max-width: 420px){
+        #menu {
+            width: 100%;
+            font-size: 0.7rem;
+            text-align: center;
+        }
+       #footer h3 {
+           font-size: 1rem;
+       }
+    }
+    @media (max-width: 380px){
+        #logo img {
+            max-width: 85%;
+            max-height: 140px;
+        }
+        #menu {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            font-size: 1rem;
+        }
+        #menu a {
+            border: none;
+        }
+        .about {
+            padding-top: 45vh;
+        }
+    }
+}
