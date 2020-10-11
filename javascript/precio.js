@@ -9,7 +9,7 @@ export default function precio(btn, btntwo){
               $precio = $father.nextElementSibling
 
         if(e.target.matches(btn)){
-            let valor = $hiden.value / 2
+            let valor = $hiden.value / 2 +5
             $precio.textContent = `${valor} $`
            
         }
