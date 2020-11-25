@@ -13,7 +13,7 @@ html {
 body {
     margin: 0;
     padding: 0;
-    background-image: url(./images/pattern.jpg);
+    background-color: #f3f3f3;
     overflow-x: hidden;
 }
 *,
@@ -24,6 +24,19 @@ body {
     padding: 0;
 }
 /***********************header*******************/
+.mesage {
+    width: 100%;
+    min-height: 50px;
+    background-color: rgba(0, 201, 153, 0.8);
+    color: var(--color-second);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.circles {
+    color:#707070;
+    margin-right: 1rem;
+}
 #header {
     position: sticky;
     top: 0px;
@@ -57,18 +70,17 @@ body {
     border: none;
 }
 #menu a:hover {
-    color: var(--background-second);
+    color: rgba(0, 201, 153, 1);
 }
-#menu a.active {
+/*#menu a.active {
     color: var(--background-second);
-}
+}*/
 /***********************show*******************/
 #show {
     position: relative;
     width: 100%;
     background-image: url(./images/show.jpg);
     background-position: center;
-    /*background-size: cover;*/
     min-height: 50vh;
     margin-bottom: 10vh;
     display: flex;
@@ -106,7 +118,7 @@ body {
     padding-right: 0;
 }
 #fixed > div > h3 {
-    color: #cccccc;
+    color: #444444;
 }
 .delivery {
     font-size: 2rem;
@@ -139,7 +151,7 @@ body {
     border-bottom: none;
 }
 #fixedone > div > div h3 {
-    color: #cccccc;
+    color: #444444;
 }
 .deliveryone {
     font-size: 2rem;
@@ -161,53 +173,54 @@ body {
 }
 /***********************main*******************/
 main {
-    margin-left: 6vw;
+    padding: 0 20px 0 20px;
 }
 .about {
-    width: 90%;
-    text-align: center;
-    padding-top: 22vh;
-    min-height: 50vh;
+    width: 100%;
+    text-align: start;
+    padding-top: 5vh;
+    padding-left: 2vw;
+    padding-bottom: 10vh;
+    margin-top: 5vh;
+    border-top: thin solid black;
+    border-bottom: thin solid black;
+    min-height: 20vh;
 }
 .about p {
-    color: var(--color-second);
-    font-size: 1.5rem;
+    color: var(--color-primary);
+    font-size: 1.2rem;
 }
 .products {
-    width: 90%;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
-    padding-top: 10vh;
+    padding-top: 30vh;
 }
 .title {
     width: 100%;
-    font-size: 2rem;
-    padding-top: 10vh;
-    margin-bottom: 10vh;
+    font-size: 1.5rem;
+    padding: 5px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     color: var(--color-second);
+    background-color: rgba(0, 201, 153, 1);
 }
 .div,
 .divtwo {
     width: 25%;
     background-color: transparent;
-    border: thin solid var(--color-second);
-    margin-top: 5vh;
     margin-bottom: 5vh;
-    border-radius: 15px;
     padding: 20px;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    margin-left: 5vw;
-    color: var(--color-second);
+    color: var(--color-primary);
 }
 .div h3,
 .divtwo h3 {
-    font-size: 1.5rem;
+    font-size: 1rem;
     margin-bottom: 2vh;
 }
 .div img,
@@ -217,66 +230,78 @@ main {
     border-radius: 50%;
 }
 .div:hover {
-    transform: scale(1.03, 1.03);
-    box-shadow: 0 0 20px #cccccc;
-    background-color:  rgba(0, 201, 153, 0.3);
+    box-shadow: 0 0 5px #cccccc;
+    background-color:  rgba(0, 201, 153, 0.5);
     color: var(--color-primary);
-    border: thin solid var(--color-primary);
 }
 .divtwo:hover {
-    transform: scale(1.03, 1.03);
-    box-shadow: 0 0 20px #cccccc;
-    background-color:  rgba(94 , 223, 0, 0.3);
+    box-shadow: 0 0 5px #cccccc;
+    background-color:  rgba(94 , 223, 0, 0.5);
     color: var(--color-primary);
-    border: thin solid var(--color-primary);
 }
 .sale {
-    color: rgb(245, 22, 7);
+    background-color: var(--background-second);
+    color: var(--color-second);
+    padding: 4px;
 }
 .contact {
-    width: 90%;
-    margin-bottom: 10vh;
-    min-height: 50vh;
-    padding-top: 20vh;
+    width: 100%;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    min-height: 20vh;
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #ffffff;
+    
 }
-.contact > div:last-child {
-    margin-top: 10vh;
+.contact div div h3 {
+    font-size: 1.5rem;
+    text-align: center;
+}
+.contact div div:first-child {
+    border-right: none;
+}
+.contact div {
+    margin-right: 2rem;
+    padding-right: 2rem;
+    border-right: thin solid #cccccc;
+}
+.contact div:last-child {
+    border: none;
 }
 .contact a {
     text-decoration: none;
     border: none;
-    color: var(--color-second);
+    color: var(--color-primary);
 }
-.whatsapp,
 .instagram,
+.facebook,
 .mail {
-    margin-top: 3vh;
-    margin-left: 5vw;
-    font-size: 1.5rem;
-    color: var(--color-second);
-}
-.whatsapp > span,
-.instagram > span,
-.mail > span {
-    font-family: var(--font-family) !important;
-}
-.contact h3 {
-    margin-top: 3vh;
-    margin-left: 5vw;
-    margin-right: 5vw;
-    font-size: 1.5rem;
-    color: var(--color-second);
+    margin-left: 2.5vw;
+    font-size: 3rem;
+    color: var(--color-primary);
 }
 .contact h4 {
     margin-top: 3vh;
-    font-size: 1.1rem;
-    color: var(--color-second);
+    font-size: 1rem;
+    color: var(--color-primary);
 }
 .instagram span:hover {
     color: var(--background-second);
     border: none;
+}
+/***********************safe*************************/
+.safe {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.safe img {
+    width: 100px;
+    height: 100px;
+    margin-top: 2rem;
+    margin-right: 1rem;
 }
 
 /***********************footer*******************/
@@ -284,10 +309,18 @@ main {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    min-height: 120px;
+    min-height: 100px;
     width: 100%;
-    background-color: var(--color-second);
-    margin-top: 5vh;
+    background-color: rgba(0, 201, 153, 1);
+   
+}
+.footer {
+    width: 100%;
+    min-height: 30px;
+    background-color: #707070;
+    color: var(--color-second);
+    text-align: center;
+    padding: 6px;
 }
 /* ************scroll-top-button **************** */
 
@@ -302,7 +335,7 @@ main {
     font-size: 2em;
     font-weight: bold;
     background-color: var(--background-second);
-    color: var(--color-primary);
+    color: var(--color-second);
     outline: 0;
     border: 0;
     cursor: pointer;
@@ -310,8 +343,7 @@ main {
 }
 
 .scroll-top-btn:hover {
-    background-color: var(--color-primary);
-    color: var(--color-second);
+    color: var(--color-primary);
 }
 
 .hidden {
@@ -346,6 +378,28 @@ main {
     transform: scale(1.1, 1.1);
     box-shadow: 0 0 10px #cccccc;
 }
+.buy {
+    position: fixed;
+    z-index: 999;
+    bottom: 17vh;
+    right: calc(3rem + 6vw);
+    width: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background-second);
+    color: var(--color-second);
+    padding: 2px;
+    outline: 0;
+    border-radius: 4px 0 0 4px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease-out;
+}
+.buy:hover {
+    transform: scale(1.1, 1.1);
+    box-shadow: 0 0 10px #cccccc;
+}
 /***********************valores*******************/
 .valores {
    display: block;
@@ -375,12 +429,9 @@ main {
    .delivery,
    .recycle,
    .plant {
-       font-size: 1.5rem;
+       font-size: 1.3rem;
    }
-   .about {
-       padding-top: 15vh;
-   }
-   .whatsapp,
+   .facebook,
    .instagram,
    .mail {
        margin-left: 3vw;
@@ -395,6 +446,10 @@ main {
        margin-top: 1.5vh;
        font-size: 0.8rem;
    }
+   .buy {
+    bottom: 16vh;
+    right: calc(6.9rem + 2vw);
+}
 }
 @media (max-width: 1140px){
     body {
@@ -429,7 +484,7 @@ main {
         margin-top: 1.5vh;
         font-size: 0.8rem;
     }
-   .whatsapp,
+    .facebook,
     .instagram,
     .mail {
         font-size: 1rem;
@@ -443,6 +498,13 @@ main {
         height: 3rem;
         border-radius: 50%;
     }
+    .buy {
+        bottom: 16vh;
+        right: calc(3rem + 1.8vw);
+    }
+    .title {
+        width: 100%;
+    }
 }
 @media (max-width: 875px){
     #fixed {
@@ -451,11 +513,8 @@ main {
     #fixedone {
         display: block;
     }
-    .about {
-        padding-top: 30vh;
-    }
     .title {
-        font-size: 1.6rem;
+        font-size: 1.3rem;
     }
     .div img,
     .divtwo img {
@@ -469,13 +528,13 @@ main {
     }
     .contact div:first-child {
         width: 100%;
-        text-align: center;
+        text-align: left;
     }
     .contact div:last-child {
         width: 100%;
-        text-align: center;
+        text-align: left;
     }
-    .whatsapp,
+    .facebook,
     .instagram,
     .mail {
         margin-left: 3vw;
@@ -490,13 +549,44 @@ main {
         margin-top: 1.5vh;
         font-size: 0.8rem;
     }
+    .buy {
+        bottom: 16vh;
+        right: calc(3rem + 2vw);
+    }
+}
     @media (max-width: 820px){
-        .about {
-            padding-top: 35vh;
-        }
         .div,
         .divtwo {
-            width: 40%;
+            width: 50%;
+        }
+        .contact {
+            width: 100%;
+            display: flex;
+            flex-direction:row;
+        }
+        .contact div {
+            display: flex;
+            justify-content: center;
+            }
+        .contact div:first-child {
+            display: flex;
+            flex-direction: column;
+        }
+        .instagram,
+        .facebook,
+        .mail {
+            margin-left: 2rem;
+            font-size: 2rem;
+        }
+        .safe {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        .safe img {
+            width: 80px;
+            height: 80px;
+            margin-top: 2rem;
         }
         #footer {
             display: flex;
@@ -509,6 +599,9 @@ main {
         #footer div:last-child {
             width: 100%;
             text-align: center;
+        }
+        .buy {
+            bottom: 16vh;
         }
     }
     @media (max-width: 675px){
@@ -543,14 +636,14 @@ main {
             font-size: 1rem;
         }
         .about p {
-            font-size: 1.2rem;
+            font-size: 1rem;
         }
         .products {
             width: 100%;
         }
         .div,
         .divtwo {
-            width: 80%;
+            width: 100%;
         }
         .div h3,
         .divtwo h3 {
@@ -563,30 +656,47 @@ main {
             border-radius: 50%;
         }
         .contact {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-left: 2rem;
+        }
+        .contact div {
+            display: flex;
+            justify-content: center;
+            border-right: none;
+            }
+        .contact div div h3 {
+            padding-left: 2rem;
+        }
+        .contact div:first-child {
             display: flex;
             flex-direction: column;
         }
-        .contact div:first-child {
+        .contact div h4 {
+            font-size: 0.7rem;
+            display: flex;
+            justify-content: center;
             width: 100%;
-            text-align: center;
         }
-        .contact div:last-child {
-            width: 100%;
-            text-align: center;
+        .instagram,
+        .facebook,
+        .mail {
+            margin-left: 2rem;
+            font-size: 2rem;
         }
-        .contact h3 {
-            margin-top: 1.5vh;
-            margin-left: 1.5vw;
-            margin-right: 1.5vw;
-            font-size: 1rem;
+        .safe img {
+            width: 50px;
+            height: 50px;  
+            margin-left: 2.2rem;
         }
-        .contact h4 {
+        .buy {
+            right: calc(3rem + 2vw);
+        }
+        .mesage {
             font-size: 0.8rem;
-        }
-        .whatsapp > span,
-        .instagram > span,
-        .mail > span {
-            font-size: 0.8rem;
+            padding: 2px 4px;
         }
     }
     @media (max-width: 495px){
@@ -602,7 +712,7 @@ main {
             border-radius: 50%;
         }
         .title {
-            font-size: 1.4rem;
+            font-size: 1.1rem;
         }
     }
     @media (max-width: 420px){
@@ -612,8 +722,12 @@ main {
             text-align: center;
         }
        #footer h3 {
-           font-size: 1rem;
+           font-size: 0.8rem;
        }
+       .buy {
+        bottom: 17vh;
+        right: calc(3rem + 2.5vw)
+    }
     }
     @media (max-width: 380px){
         #logo img {
@@ -629,8 +743,12 @@ main {
         #menu a {
             border: none;
         }
-        .about {
-            padding-top: 45vh;
+        .buy {
+            bottom: 16.6vh;
+            right: calc(3rem + 2.5vw)
+        }
+        .mesage {
+            font-size: 0.8rem;
+            padding: 2px 4px;
         }
     }
-}
