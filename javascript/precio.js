@@ -11,17 +11,17 @@ export default function precio(btnOne, btn, btntwo){
 
         if(e.target.matches(btnOne)){
             let valor = $hidenOne.value
-            $precio.textContent = `${valor} $`
+            $precio.textContent = `$${valor}`
         }
         if(e.target.matches(btn)){
             let valor = $hiden.value / 2 + 5
-            $precio.textContent = `${valor} $`
+            $precio.textContent = `$${valor}`
            
         }
 
         if(e.target.matches(btntwo)){
             let valor = $hiden.value
-            $precio.textContent = `${valor} $`
+            $precio.textContent = `$${valor}`
         }
     }) 
 }
