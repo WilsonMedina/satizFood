@@ -7,5 +7,5 @@ const d = document
 d.addEventListener('DOMContentLoaded', (e) => {
     scrollTop('.scroll-top-btn')
     scrollSpy()
-    precio('.medio', '.kilo')
+    precio('.cuarto', '.medio', '.kilo')
 })
