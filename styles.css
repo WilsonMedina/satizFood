@@ -223,6 +223,10 @@ main {
     font-size: 1rem;
     margin-bottom: 2vh;
 }
+.div h4,
+.divtwo h4 {
+    margin-bottom: 2.5vh;
+}
 .div img,
 .divtwo img {
     width: 180px;
@@ -240,6 +244,12 @@ main {
     color: var(--color-primary);
 }
 .sale {
+    display: none;
+    background-color: var(--background-second);
+    color: var(--color-second);
+    padding: 4px;
+}
+.saleOne {
     background-color: var(--background-second);
     color: var(--color-second);
     padding: 4px;
